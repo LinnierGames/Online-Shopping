@@ -13,6 +13,10 @@
 		E913D47A202A3C5C00243BDE /* Online_Shopping.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E913D478202A3C5C00243BDE /* Online_Shopping.xcdatamodeld */; };
 		E913D47C202A3C5C00243BDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E913D47B202A3C5C00243BDE /* Assets.xcassets */; };
 		E913D47F202A3C5C00243BDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E913D47D202A3C5C00243BDE /* LaunchScreen.storyboard */; };
+		E913D48A202A3CFD00243BDE /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913D486202A3CFD00243BDE /* Product+CoreDataClass.swift */; };
+		E913D48C202A3CFD00243BDE /* Cart+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913D488202A3CFD00243BDE /* Cart+CoreDataClass.swift */; };
+		E913D490202A42C600243BDE /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913D48E202A42C600243BDE /* User+CoreDataClass.swift */; };
+		E913D495202A42F600243BDE /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913D494202A42F600243BDE /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E913D47B202A3C5C00243BDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E913D47E202A3C5C00243BDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E913D480202A3C5C00243BDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E913D486202A3CFD00243BDE /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E913D488202A3CFD00243BDE /* Cart+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E913D48E202A42C600243BDE /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E913D494202A42F600243BDE /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +70,21 @@
 				E913D47B202A3C5C00243BDE /* Assets.xcassets */,
 				E913D47D202A3C5C00243BDE /* LaunchScreen.storyboard */,
 				E913D480202A3C5C00243BDE /* Info.plist */,
-				E913D478202A3C5C00243BDE /* Online_Shopping.xcdatamodeld */,
+				E913D493202A42E100243BDE /* CoreData */,
 			);
 			path = "Online-Shopping";
+			sourceTree = "<group>";
+		};
+		E913D493202A42E100243BDE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E913D494202A42F600243BDE /* CoreDataStack.swift */,
+				E913D478202A3C5C00243BDE /* Online_Shopping.xcdatamodeld */,
+				E913D486202A3CFD00243BDE /* Product+CoreDataClass.swift */,
+				E913D488202A3CFD00243BDE /* Cart+CoreDataClass.swift */,
+				E913D48E202A42C600243BDE /* User+CoreDataClass.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E913D495202A42F600243BDE /* CoreDataStack.swift in Sources */,
 				E913D474202A3C5C00243BDE /* ViewController.swift in Sources */,
 				E913D472202A3C5C00243BDE /* AppDelegate.swift in Sources */,
+				E913D490202A42C600243BDE /* User+CoreDataClass.swift in Sources */,
 				E913D47A202A3C5C00243BDE /* Online_Shopping.xcdatamodeld in Sources */,
+				E913D48A202A3CFD00243BDE /* Product+CoreDataClass.swift in Sources */,
+				E913D48C202A3CFD00243BDE /* Cart+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
