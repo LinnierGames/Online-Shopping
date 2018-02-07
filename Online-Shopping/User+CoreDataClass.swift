@@ -12,5 +12,11 @@ import CoreData
 
 @objc(User)
 public class User: NSManagedObject {
+    
+    public required convenience init(name: String, in context: NSManagedObjectContext) {
+        self.init(context: context)
+        
+        self.name = name
+    }
 
 }

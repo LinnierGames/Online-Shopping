@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91169F4202BB9BE00BF584B /* FetchedResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91169F3202BB9BE00BF584B /* FetchedResultsTableViewController.swift */; };
+		E91169F6202BBA1400BF584B /* OnlineStoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91169F5202BBA1400BF584B /* OnlineStoreTableViewController.swift */; };
+		E91169F8202BC39500BF584B /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91169F7202BC39500BF584B /* ProductTableViewCell.swift */; };
 		E913D472202A3C5C00243BDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913D471202A3C5C00243BDE /* AppDelegate.swift */; };
-		E913D474202A3C5C00243BDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913D473202A3C5C00243BDE /* ViewController.swift */; };
 		E913D477202A3C5C00243BDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E913D475202A3C5C00243BDE /* Main.storyboard */; };
 		E913D47A202A3C5C00243BDE /* Online_Shopping.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E913D478202A3C5C00243BDE /* Online_Shopping.xcdatamodeld */; };
 		E913D47C202A3C5C00243BDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E913D47B202A3C5C00243BDE /* Assets.xcassets */; };
@@ -20,9 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E91169F3202BB9BE00BF584B /* FetchedResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedResultsTableViewController.swift; sourceTree = "<group>"; };
+		E91169F5202BBA1400BF584B /* OnlineStoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineStoreTableViewController.swift; sourceTree = "<group>"; };
+		E91169F7202BC39500BF584B /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		E913D46E202A3C5C00243BDE /* Online-Shopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Online-Shopping.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E913D471202A3C5C00243BDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E913D473202A3C5C00243BDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E913D476202A3C5C00243BDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E913D479202A3C5C00243BDE /* Online_Shopping.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Online_Shopping.xcdatamodel; sourceTree = "<group>"; };
 		E913D47B202A3C5C00243BDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E91169F2202BB97D00BF584B /* Supporiting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E913D475202A3C5C00243BDE /* Main.storyboard */,
+				E913D47B202A3C5C00243BDE /* Assets.xcassets */,
+				E913D47D202A3C5C00243BDE /* LaunchScreen.storyboard */,
+				E913D480202A3C5C00243BDE /* Info.plist */,
+			);
+			name = "Supporiting Files";
+			sourceTree = "<group>";
+		};
 		E913D465202A3C5C00243BDE = {
 			isa = PBXGroup;
 			children = (
@@ -65,12 +80,11 @@
 			isa = PBXGroup;
 			children = (
 				E913D471202A3C5C00243BDE /* AppDelegate.swift */,
-				E913D473202A3C5C00243BDE /* ViewController.swift */,
-				E913D475202A3C5C00243BDE /* Main.storyboard */,
-				E913D47B202A3C5C00243BDE /* Assets.xcassets */,
-				E913D47D202A3C5C00243BDE /* LaunchScreen.storyboard */,
-				E913D480202A3C5C00243BDE /* Info.plist */,
+				E91169F5202BBA1400BF584B /* OnlineStoreTableViewController.swift */,
+				E91169F3202BB9BE00BF584B /* FetchedResultsTableViewController.swift */,
+				E91169F2202BB97D00BF584B /* Supporiting Files */,
 				E913D493202A42E100243BDE /* CoreData */,
+				E91169F7202BC39500BF584B /* ProductTableViewCell.swift */,
 			);
 			path = "Online-Shopping";
 			sourceTree = "<group>";
@@ -159,11 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91169F6202BBA1400BF584B /* OnlineStoreTableViewController.swift in Sources */,
 				E913D495202A42F600243BDE /* CoreDataStack.swift in Sources */,
-				E913D474202A3C5C00243BDE /* ViewController.swift in Sources */,
+				E91169F8202BC39500BF584B /* ProductTableViewCell.swift in Sources */,
 				E913D472202A3C5C00243BDE /* AppDelegate.swift in Sources */,
 				E913D490202A42C600243BDE /* User+CoreDataClass.swift in Sources */,
 				E913D47A202A3C5C00243BDE /* Online_Shopping.xcdatamodeld in Sources */,
+				E91169F4202BB9BE00BF584B /* FetchedResultsTableViewController.swift in Sources */,
 				E913D48A202A3CFD00243BDE /* Product+CoreDataClass.swift in Sources */,
 				E913D48C202A3CFD00243BDE /* Cart+CoreDataClass.swift in Sources */,
 			);

@@ -34,13 +34,13 @@
         <!--Store-->
         <scene sceneID="q0Z-Lg-9ne">
             <objects>
-                <tableViewController id="A7N-O4-ViX" sceneMemberID="viewController">
+                <tableViewController id="A7N-O4-ViX" customClass="OnlineStoreTableViewController" customModule="Online_Shopping" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XC0-h1-O6j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="68" id="XAd-1s-M1s">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="68" id="XAd-1s-M1s" customClass="ProductTableViewCell" customModule="Online_Shopping" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XAd-1s-M1s" id="lRK-ns-Hjh">
@@ -50,23 +50,23 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pGd-ra-Yb9">
                                             <rect key="frame" x="16" y="8" width="343" height="51.5"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-Y1-JWw">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-Y1-JWw">
                                                     <rect key="frame" x="0.0" y="0.0" width="51.5" height="51.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="m1e-Y1-JWw" secondAttribute="height" multiplier="1:1" id="Bgd-HL-gRK"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yHD-kc-vdi">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="yHD-kc-vdi">
                                                     <rect key="frame" x="59.5" y="0.0" width="250" height="51.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08b-Et-vno">
-                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="24"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="28"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjn-Cy-7pW">
-                                                            <rect key="frame" x="0.0" y="24" width="250" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="28" width="250" height="23.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -79,10 +79,16 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeI-js-pg0">
                                                             <rect key="frame" x="0.0" y="0.0" width="25.5" height="26"/>
                                                             <state key="normal" title="F"/>
+                                                            <connections>
+                                                                <action selector="pressFavorite:" destination="XAd-1s-M1s" eventType="touchUpInside" id="YP2-vE-X4h"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsn-mn-Wze">
                                                             <rect key="frame" x="0.0" y="26" width="25.5" height="25.5"/>
                                                             <state key="normal" title="C"/>
+                                                            <connections>
+                                                                <action selector="pressCart:" destination="XAd-1s-M1s" eventType="touchUpInside" id="CDR-GD-Pxu"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -100,6 +106,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cartButton" destination="Fsn-mn-Wze" id="lOS-Mg-nvn"/>
+                                    <outlet property="favoritButton" destination="eeI-js-pg0" id="uTz-Ic-is2"/>
+                                    <outlet property="labelDescription" destination="Tjn-Cy-7pW" id="Vd4-Om-7Pr"/>
+                                    <outlet property="labelTitle" destination="08b-Et-vno" id="C0C-Gr-RTV"/>
+                                    <outlet property="thumbnail" destination="m1e-Y1-JWw" id="GWC-pj-sne"/>
                                     <segue destination="Xqq-Mi-8jT" kind="showDetail" identifier="show item details" id="xaK-2V-pps"/>
                                 </connections>
                             </tableViewCell>

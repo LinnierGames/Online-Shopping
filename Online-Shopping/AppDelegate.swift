@@ -17,6 +17,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        let context = CoreDataStack.shared.viewContext
+//        let count = arc4random() % 50
+//        
+//        do {
+//            let fetchCart: NSFetchRequest<Cart> = Cart.fetchRequest()
+//            let carts = try context.fetch(fetchCart)
+//            if let cart = carts.first {
+//                for _ in 0...count {
+//                    let p = Product(title: "Untitled", price: 0.99, for: cart, in: context)
+//                    p.objectID.uriRepresentation()
+//                }
+//                
+//                CoreDataStack.shared.save()
+//            }
+//            
+//        } catch {
+//            
+//        }
+        
         return true
     }
 
