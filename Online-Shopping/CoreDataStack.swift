@@ -28,7 +28,7 @@ final class CoreDataStack {
         return viewContext
     }()
     
-    lazy var privateContext: NSManagedObjectContext = {
+    lazy var newPrivateContext: NSManagedObjectContext = {
         return persistentContainer.newBackgroundContext()
     }()
     
