@@ -11,6 +11,8 @@ import CoreData
 
 class OnlineStoreTableViewController: FetchedResultsTableViewController {
     
+    // MARK: - RETURN VALUES
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return false
     }
@@ -25,6 +27,8 @@ class OnlineStoreTableViewController: FetchedResultsTableViewController {
         return cell
     }
     
+    // MARK: - VOID METHODS
+    
     private func updateUI() {
         let fetch: NSFetchRequest<Product> = Product.fetchRequest()
         fetch.sortDescriptors = [NSSortDescriptor(key: "title", ascending: false, selector: #selector(NSString.localizedStandardCompare(_:)))]
@@ -34,6 +38,10 @@ class OnlineStoreTableViewController: FetchedResultsTableViewController {
             sectionNameKeyPath: nil, cacheName: nil
         )
     }
+    
+    // MARK: - IBACTIONS
+    
+    // MARK: - LIFE CYCLE
     
     override func viewDidLoad() {
         super.viewDidLoad()

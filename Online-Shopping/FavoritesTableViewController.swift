@@ -11,6 +11,8 @@ import CoreData
 
 class FavoritesTableViewController: FetchedResultsTableViewController {
     
+    // MARK: - RETURN VALUES
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FavoriteTableViewCell
         
@@ -20,6 +22,8 @@ class FavoritesTableViewController: FetchedResultsTableViewController {
         
         return cell
     }
+    
+    // MARK: - VOID METHODS
     
     private func updateUI() {
         let fetch: NSFetchRequest<Product> = Product.fetchRequest()
@@ -31,6 +35,16 @@ class FavoritesTableViewController: FetchedResultsTableViewController {
             sectionNameKeyPath: nil, cacheName: nil
         )
     }
+    
+    // MARK: Table View
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        //TODO: Remove from favorites
+    }
+    
+    // MARK: - IBACTIONS
+    
+    // MARK: - LIFE CYCLE
     
     override func viewDidLoad() {
         tableView.rowHeight = 58
