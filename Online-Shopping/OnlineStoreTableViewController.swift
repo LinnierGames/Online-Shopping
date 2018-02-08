@@ -39,6 +39,24 @@ class OnlineStoreTableViewController: FetchedResultsTableViewController {
         )
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "show product":
+                guard
+                    let nv = segue.destination as? UINavigationController,
+                    let vc = nv.topViewController as? ProductDetailViewController,
+                    let indexPath = tableView.indexPath(for: sender as! UITableViewCell) else {
+                        return assertionFailure("no index path found")
+                }
+                
+                let product = fetchedResultsController.product(at: indexPath)
+                vc.product = product
+            default: break
+            }
+        }
+    }
+    
     // MARK: - IBACTIONS
     
     // MARK: - LIFE CYCLE

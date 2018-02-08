@@ -13,6 +13,10 @@ class FavoritesTableViewController: FetchedResultsTableViewController {
     
     // MARK: - RETURN VALUES
     
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Remove"
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FavoriteTableViewCell
         
@@ -34,6 +38,24 @@ class FavoritesTableViewController: FetchedResultsTableViewController {
             managedObjectContext: CoreDataStack.shared.viewContext,
             sectionNameKeyPath: nil, cacheName: nil
         )
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "show product":
+                guard
+                    let nv = segue.destination as? UINavigationController,
+                    let vc = nv.topViewController as? ProductDetailViewController,
+                    let indexPath = tableView.indexPath(for: sender as! UITableViewCell) else {
+                        return assertionFailure("no index path found")
+                }
+                
+                let product = fetchedResultsController.product(at: indexPath)
+                vc.product = product
+            default: break
+            }
+        }
     }
     
     // MARK: Table View
