@@ -322,13 +322,13 @@
         <!--Favorites-->
         <scene sceneID="8lg-R1-z3t">
             <objects>
-                <tableViewController id="Jq4-JT-y3F" sceneMemberID="viewController">
+                <tableViewController id="Jq4-JT-y3F" customClass="FavoritesTableViewController" customModule="Online_Shopping" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="htS-Wh-yWK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="58" id="XpH-w9-pDr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="58" id="XpH-w9-pDr" customClass="FavoriteTableViewCell" customModule="Online_Shopping" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XpH-w9-pDr" id="hnM-kD-wFb">
@@ -341,6 +341,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9E-wr-2di">
                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="36"/>
                                                     <state key="normal" title="Add"/>
+                                                    <connections>
+                                                        <action selector="pressAddToCart:" destination="XpH-w9-pDr" eventType="touchUpInside" id="qjw-HI-Rpq"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W9H-VT-0l0">
                                                     <rect key="frame" x="38" y="0.0" width="36" height="36"/>
@@ -376,6 +379,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="addButton" destination="e9E-wr-2di" id="Auc-cq-xcu"/>
+                                    <outlet property="labelDescription" destination="vEL-Sg-BrA" id="9um-To-5NQ"/>
+                                    <outlet property="labelTitle" destination="csD-c3-1mG" id="Om5-Jw-jqB"/>
+                                    <outlet property="thumbnail" destination="W9H-VT-0l0" id="VR2-Fr-dxJ"/>
                                     <segue destination="Xqq-Mi-8jT" kind="showDetail" identifier="show item details" id="E9B-pu-Tsd"/>
                                 </connections>
                             </tableViewCell>
@@ -458,6 +465,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xaK-2V-pps"/>
+        <segue reference="E9B-pu-Tsd"/>
     </inferredMetricsTieBreakers>
 </document>

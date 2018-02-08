@@ -21,7 +21,7 @@ class ProductTableViewCell: UITableViewCell {
     
     @IBOutlet weak var delegate: ProductTableViewCellDelegate?
     
-    func configure(product: Product) {
+    func configure(_ product: Product) {
         self.labelTitle.text = product.title
         self.labelDescription.text = String(product.price)
         if product.isStarred {

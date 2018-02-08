@@ -18,8 +18,8 @@ class OnlineStoreTableViewController: FetchedResultsTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductTableViewCell
         
-        let product = fetchedResultsController.proudct(at: indexPath)
-        cell.configure(product: product)
+        let product = fetchedResultsController.product(at: indexPath)
+        cell.configure(product)
         cell.delegate = self
         
         return cell
@@ -63,11 +63,11 @@ extension OnlineStoreTableViewController: ProductTableViewCellDelegate {
                 return assertionFailure("did not find an indexPath")
         }
         
-        let product = fetchedResultsController.proudct(at: indexPath)
+        let product = fetchedResultsController.product(at: indexPath)
         let invertedBool = !(product.isStarred)
         product.isStarred = invertedBool
         CoreDataStack.shared.save()
         
-        cell.configure(product: product)
+        cell.configure(product)
     }
 }

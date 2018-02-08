@@ -24,7 +24,7 @@ public final class Product: NSManagedObject {
 }
 
 extension NSFetchedResultsController {
-    @objc func proudct(at indexPath: IndexPath) -> Product {
+    @objc func product(at indexPath: IndexPath) -> Product {
         return self.object(at: indexPath) as! Product
     }
 }
